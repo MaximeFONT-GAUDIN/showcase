@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Shizuru&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+a:link {
+    text-decoration: none;
 }
 
 .text-center {
@@ -25,17 +32,60 @@ body {
 }
 
 .navbar-container {
+    width: 100vw;
+    position: fixed;
+    background-color: #212529;
     align-items: center;
     display: flex;
     flex-direction: row;
 }
 
+.navbar-content {
+    font-family: Lato;
+}
+
 .navbar-logo {
     margin-left: 100px;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+}
+.navbar-logo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.navbar-logo:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-link {
+    color: #FFFFFF8C;
+    overflow: hidden;
+    background: linear-gradient(to right, blue, blue 50%, #FFFFFF8C 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+
+.nav-link:hover {
+    background-position: 0 100%;
 }
 
 .navbar-nav {
-    list-style-type:none;
+    list-style-type: none;
     display: flex;
     flex-direction: row;
 }
@@ -49,4 +99,40 @@ body {
     width: 100vw;
     background-image: url('../image/image_herobanner.jpg');
     background-size: cover;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 40% 60%;    
+}
+
+.left-side {
+    /* background-color: yellow; */
+    text-align: center;
+}
+
+.profile-pics {
+    margin: 30px;
+    width: 80%;
+    height: auto;
+}
+
+.right-side {
+    background-color: aqua;
+}
+
+.right-container {
+    background-color: aquamarine;
+    margin: 30px;
+    margin-top: 50px;
+}
+
+.presentation-title {
+    font-family: Montserrat;
+    font-size: 2em;
+}
+
+.presentation-text {
+    font-family: Lato;
+    font-weight: 100;
 }
