@@ -12,7 +12,6 @@ a:link {
 }
 
 .text-center {
-    /* background-color: aqua; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,6 +20,7 @@ a:link {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border-radius: 25px;
+    z-index: 500;
 }
 
 .name {
@@ -32,6 +32,7 @@ a:link {
 }
 
 .navbar-container {
+    z-index: 1000;
     width: 100vw;
     position: fixed;
     background-color: #212529;
@@ -101,13 +102,12 @@ a:link {
     background-size: cover;
 }
 
-.row {
+.about-container {
     display: grid;
-    grid-template-columns: 40% 60%;    
+    grid-template-columns: 40% 60%;
 }
 
 .left-side {
-    /* background-color: yellow; */
     text-align: center;
 }
 
@@ -117,22 +117,50 @@ a:link {
     height: auto;
 }
 
-.right-side {
-    background-color: aqua;
-}
-
 .right-container {
-    background-color: aquamarine;
     margin: 30px;
     margin-top: 50px;
 }
 
-.presentation-title {
+h2 {
     font-family: Montserrat;
     font-size: 2em;
 }
+h3 {
+    font-family: Montserrat;
+}
 
-.presentation-text {
+p {
     font-family: Lato;
     font-weight: 100;
+}
+
+.title-quality {
+    margin: 30px;
+}
+
+.qualities-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.quality-content img{
+    width: 60%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        display: block;
+    }
+    
+    .left-side, .right-side {
+        width: 100%;
+        margin: 0;
+    }
+
+    .qualities-container {
+        display: block;
+    }
 }
