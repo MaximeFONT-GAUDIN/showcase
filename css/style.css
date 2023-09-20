@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Shizuru&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Shizuru&display=swap');
+@import url('http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext');
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: Montserrat;
 }
 
 a:link {
@@ -113,7 +113,7 @@ a:link {
 
 .profile-pics {
     margin: 30px;
-    width: 80%;
+    width: 60%;
     height: auto;
 }
 
@@ -123,11 +123,7 @@ a:link {
 }
 
 h2 {
-    font-family: Montserrat;
     font-size: 2em;
-}
-h3 {
-    font-family: Montserrat;
 }
 
 p {
@@ -135,20 +131,75 @@ p {
     font-weight: 100;
 }
 
-.title-quality {
+.qualities {
     margin: 30px;
 }
 
 .qualities-container {
     display: flex;
     justify-content: space-between;
+}
+
+.quality-content {
+    width: calc(33.33% - 20px); /* 33.33% - 2 x 10px d'espacement entre chaque */
+    padding: 10px;
+    box-sizing: border-box;
     text-align: center;
 }
 
-.quality-content img{
-    width: 60%;
+.quality-image {
+    width: 100%;
     height: auto;
+    transition: transform 0.3s ease-in-out;
 }
+
+.quality-image:hover {
+    transform: scale(1.1);
+}
+
+.quality-content h3,
+.quality-content p {
+    text-align: left;
+}
+
+.quality-content h3 {
+    font-weight: 1000;
+}
+
+footer {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+footer a {
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    background: linear-gradient(to right, blue, blue 50%, white 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+
+    /* color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 30px;
+    overflow: hidden;
+    background: linear-gradient(to right, blue, blue 50%, transparent 50%);
+    background-clip: text; */
+}
+
+footer a:hover {
+    background-position: 0 100%;
+    /* color: blue; */
+}
+
 
 @media screen and (max-width: 768px) {
     .about-container {
@@ -162,5 +213,11 @@ p {
 
     .qualities-container {
         display: block;
+    }
+
+    .quality-content {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
     }
 }
