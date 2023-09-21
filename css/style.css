@@ -60,7 +60,7 @@ a:link {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: blue;
+    background-color: white;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -72,7 +72,7 @@ a:link {
 .nav-link {
     color: #FFFFFF8C;
     overflow: hidden;
-    background: linear-gradient(to right, blue, blue 50%, #FFFFFF8C 50%);
+    background: linear-gradient(to right, white, white 50%, #FFFFFF8C 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -141,7 +141,7 @@ p {
 }
 
 .quality-content {
-    width: calc(33.33% - 20px); /* 33.33% - 2 x 10px d'espacement entre chaque */
+    width: calc(33.33% - 20px);
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
@@ -178,21 +178,13 @@ footer a {
     font-weight: bold;
     color: white;
     overflow: hidden;
-    background: linear-gradient(to right, blue, blue 50%, white 50%);
+    background: linear-gradient(to right, #FFFFFF8C, #FFFFFF8C 50%, white 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% 100%;
     background-position: 100%;
     transition: background-position 275ms ease;
-
-    /* color: white;
-    text-decoration: none;
-    font-size: 16px;
-    margin-left: 30px;
-    overflow: hidden;
-    background: linear-gradient(to right, blue, blue 50%, transparent 50%);
-    background-clip: text; */
 }
 
 footer a:hover {
