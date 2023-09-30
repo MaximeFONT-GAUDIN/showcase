@@ -148,13 +148,19 @@ p {
 }
 
 .quality-image {
-    width: 100%;
+    width: 80%;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
 .quality-image:hover {
     transform: scale(1.1);
+}
+
+.green-content {
+    /* width: 90%;
+    height: auto; */
+    border-radius: 15px;
 }
 
 .quality-content h3,
