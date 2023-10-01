@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll("nav a");
     links.forEach((link) => {
-        if(links[links.length - 1] == link) {
-            return;
-        }
-        if(links[0] == link) {
-            return;
-        }
+        // if(links[links.length - 1] == link) {
+        //     return;
+        // }
+        // if(links[0] == link) {
+        //     return;
+        // }
         link.addEventListener("click", function (e) {
             e.preventDefault();
 
